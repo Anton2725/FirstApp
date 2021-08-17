@@ -17,11 +17,11 @@ namespace FirstApp
 
             Console.ReadKey();
             */
-
+            /*
             Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
             var color = Console.ReadLine();
-
+            */
             /*
             if (color == "red")
             {
@@ -46,6 +46,7 @@ namespace FirstApp
                 Console.WriteLine("Your color is cyan!");
             }
             */
+            /*
             switch (color)
             {
                 case "red":
@@ -76,9 +77,47 @@ namespace FirstApp
                     Console.WriteLine("Your color is yellow!");
                     break;
             }
+            */
 
+            var saidworld = "Ты меня слышишь?";
+            Console.WriteLine(saidworld);
+
+            var deep = 6;
+
+            Echo(saidworld, deep);
+
+            Console.ReadKey();
         }
+
+        static void Echo(string phrase, int deep)
+        {
+
+            string modif = phrase;
+            if (modif.Length > 2)
+            {
+                modif = modif.Remove(0, 2);
+            }
+            
+            Console.WriteLine("..." + modif);
+
+            if (deep > 1)
+            {
+                Echo(modif, deep - 1);
+            }
+        }
+
+
+        static int SumNumbers(ref int num1, in int num2, out int num3, int num4)
+        {
+            num3 = 1;
+
+            return 0;
+        }
+
+
     }
+
+
 
     enum DaysOfWeek : byte
     {
